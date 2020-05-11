@@ -1,0 +1,231 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+h1,h2,h3{
+    font-weight: 900;
+}
+h4,h5,h6{
+    font-weight: 700;
+}
+/*buttons*/
+.btn-outline-secondary{
+    background-color: transparent !important;
+    border-color: #011627 !important;
+    color: #011627 !important;
+    border-radius: 0%;
+    position: relative;
+}
+.btn-outline-secondary::before{
+    content: '';
+    position: absolute;
+    background-color: #00ccff;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    z-index: -1;
+    transition: 0.5s;
+}
+.btn-outline-secondary:hover::before{
+    width: 100%;
+}
+.btn-secondary{
+    background: #011627 !important;
+    border-radius: 0%;
+    border-color: #011627 !important;
+}
+.btn-secondary:hover{
+    color: #00ccff;
+}
+.btn-primary{
+    color: #011627 !important;
+    background-color: #00ccff !important;
+    border-radius: 0%;
+    border-color: #00ccff !important;
+}
+.btn-primary:hover{
+    background-color: #011627 !important;
+    color: #00ccff !important;
+}
+/*buttons*/
+
+/*navbar*/
+.navbar{
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+.nav-link,
+.navbar-brand{
+    color: #011627;
+}
+.nav-link:hover,
+.navbar-brand:hover{
+    color: #777;
+}
+.navbar-brand{
+    font-size: 1.8rem;
+}
+/*navbar*/
+
+/*call-to-action*/
+.call-to-action{
+    background: #011627;
+    color: #fafaff;
+}
+.heading-line{
+    height: 3px;
+    width: 10%;
+    background: #00ccff;
+}
+/*call-to-action*/
+
+/*detail*/
+.detail{
+    background-color: #011627;
+    color: #eee;
+}
+.detail:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100px;
+	height: 50%;
+	background: #00cccc;
+	transform-origin: top;
+	transform: skewX(-30deg);
+	z-index: 1;
+}
+/*detail*/
+
+/*spin-hole*/
+.spin-hole{
+    background: #eee;
+}
+.spin-hole h3::before{
+    display: inline-block;
+    margin: 0 20px 8px 0;;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #00cccc;
+    width: 50px;
+}
+.spin-hole h3::after{
+    display: inline-block;
+    margin: 0 0 8px 20px;
+    height: 3px;
+    content: " ";
+    text-shadow: none;
+    background-color: #00cccc;
+    width: 50px;
+}
+/*spin-hole*/
+
+/*making process*/
+.making-process{
+    background: #011627;
+    color: #fafaff;
+}
+.making-process .explain::first-letter{
+    color: #00cccc;
+    font-size: xx-large;
+}
+.making-process h2::before{
+    content: '>>>';
+    color: #00ccff;
+}
+.making-process h2::after{
+    content: '<<<';
+    color: #00ccff;
+}
+/*making process*/
+
+/*points to remember*/
+.points-to-remember{
+    background: content-box radial-gradient(#011c32, #006666);
+    color: #fff;
+}
+.points-to-remember a{
+    color: #00ccff;
+}
+.points-to-remember h4::first-letter{
+    color: #00ccff;
+}
+/*points to remember*/
+
+/*portfolio*/
+.dark{
+    color: #00cccc;
+    background: #011627;
+    height: 300px;
+}
+.dark i{
+    font-size: 1.3rem;
+    color: #00cccc;
+}
+.portfolio .img-fluid{
+    object-fit: cover;
+}
+.portfolio .col-lg-3{
+    position: relative;
+}
+.filter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00ccff;
+    opacity: 0.7;
+}
+/*portfolio*/
+
+/*footer*/
+.footer{
+    background: #011627;
+    color: #fafaff;
+}
+.footer a{
+    color: #fafaff;
+}
+/*footer*/
+
+/*responsive*/
+@media(max-width:900px){
+    .navbar .nav-link{
+        display: block;
+        padding: 10px 10px;
+        width: 100%;
+        text-align: center;
+    }
+    .call-to-action .container{
+        width: 100% !important;
+    }
+}
+/*******************************Q & A about black-holes******************/
+.box {
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    background-color: #efefef;
+}
+  
+.tweets   { background-color: #011627; }
+.replies  { background-color: #000000; }
+.search   { background-color: #011627; }
+.messages { background-color: #000000; }
+  
+  /* Our Grid Code */
+.app-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100vh;
+}
+  
+  /* try to resize the screen */
+@media screen and (max-width: 1024px) {
+    .app-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 50vh 50vh;
+    }
+}
